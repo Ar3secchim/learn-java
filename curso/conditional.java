@@ -1,3 +1,4 @@
+package curso;
 public class conditional {
   public static void main(String[] args){
     int nota = 90; 

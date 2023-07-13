@@ -1,3 +1,4 @@
+package curso;
 public class logicos {
    public static void main(boolean[] args) {
     //boolean operadores logicos
