@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/POO/POO.iml" filepath="$PROJECT_DIR$/POO/POO.iml" />
+      <module fileurl="file://$PROJECT_DIR$/codingHack/codingHack.iml" filepath="$PROJECT_DIR$/codingHack/codingHack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/learn-java-btg.iml" filepath="$PROJECT_DIR$/learn-java-btg.iml" />
+    </modules>
+  </component>
+</project>
