@@ -3,10 +3,13 @@ import java.util.Scanner;
 
 public class Task3 {
   private static int nextPasswordPref = 1;
-  private static int nextPasswordNormal = 1;
+  private static int nextPasswordCommon = 1;
 
-  private static final LinkedList<String> listNormal = new LinkedList<>();
+  private static final LinkedList<String> listCommon = new LinkedList<>();
   private static final LinkedList<String> listPref = new LinkedList<>();
+
+  private static final String PREFERENTIAL = "P";
+  private static final String COMMON = "C";
 
   public static void main(String[] args) {
     final Scanner scanner = new Scanner(System.in);
@@ -25,7 +28,7 @@ public class Task3 {
        if (option == 1) {
          System.out.println("Sua senha preferencial é: " + emitPasswordPref());
        } else if (option == 2) {
-         System.out.println("Sua senha comum é: " + emitPasswordNormal());
+         System.out.println("Sua senha comum é: " + emitPasswordCommon());
        } else if (option == 3) {
          System.out.println("A próxima senha é: " + nextPassword());
        } else if (option == 4) {
@@ -39,30 +42,27 @@ public class Task3 {
 
   }
 
-  public static String emitPasswordNormal(){
+  public static String emitPasswordCommon(){
     //formatado para 3 decimais
-    String passwordNorma = "C" + String.format("%03d", nextPasswordNormal++);
-    listNormal.offer(passwordNorma);
-    return passwordNorma;
+    String passwordCommon = COMMON + String.format("%03d", nextPasswordCommon++);
+    listCommon.offer(passwordCommon);
+    return passwordCommon;
   }
 
   private static String emitPasswordPref(){
     //formatado para 3 decimais
-    String passwordPref = "P" + String.format("%03d", nextPasswordPref++);
+    String passwordPref = PREFERENTIAL + String.format("%03d", nextPasswordPref++);
     listPref.offer(passwordPref);
     return passwordPref;
   }
 
   private static String nextPassword() {
-    String password;
-    if (!listPref.isEmpty()) {
-      password = listPref.poll();
-    } else if (!listNormal.isEmpty()) {
-      password = listNormal.poll();
+    if (listPref.size() > 0) {
+      return listPref.poll();
+    } else if (listCommon.size() > 0) {
+      return listCommon.poll();
     } else {
-      password = "Não há senhas";
+      return "Não há senhas";
     }
-    return password;
   }
-
 }
