@@ -15,6 +15,7 @@ public class Daythree{
   public void execute(){
     //responsável pela entrada do input
     final Scanner scanner = new Scanner(System.in, "UTF-8");
+
     System.out.println("Escolha um das opções abaixo:");
     System.out.println("1- Verificar o dia da semana");
     System.out.println("2- Verificar um loop while");
@@ -96,7 +97,7 @@ public class Daythree{
   }
 
   public static void arrayFor(){
-    int[] meusNumeros =new int[10];
+    int[] meusNumeros = new int[10];
 
     //Foreach no java
     for(int numero: meusNumeros){
