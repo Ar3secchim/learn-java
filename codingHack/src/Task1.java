@@ -20,12 +20,12 @@ public class Task1 {
   public static boolean isCenteredTriangular(int number){
     // Calcula a fórmula para encontrar o n-ésimo número triangular
     int numberQuadrant = (int) Math.sqrt(2 * number);
-    double verificacaoNumber = (double) (numberQuadrant * (numberQuadrant + 1)) / 2;
+    double verificationNumber = (double) (numberQuadrant * (numberQuadrant + 1)) / 2;
 
     System.out.println(numberQuadrant);
-    System.out.println(verificacaoNumber);
+    System.out.println(verificationNumber);
 
-    //verificação da formula verdadeira
-    return verificacaoNumber == number;
+    //verificação da fórmula verdadeira
+    return verificationNumber == number;
   }
 }
