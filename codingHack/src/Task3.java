@@ -34,7 +34,6 @@ public class Task3 {
        } else if (option == 4) {
          scanner.close();
          System.out.println("Encerrando o processo");
-         break;
        } else {
          System.out.println("Opção inválida");
        }
