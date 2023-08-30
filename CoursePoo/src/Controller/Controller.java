@@ -6,9 +6,9 @@ public class Controller implements interfaceController{
   private boolean playing;
 
   public Controller() {
-    this.setVolume(50);
-    this.setPower(false);
-    this.setPlaying(false);
+    setVolume(50);
+    setPower(false);
+    setPlaying(false);
   }
 
   private int getVolume() {
